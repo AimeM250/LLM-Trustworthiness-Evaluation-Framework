@@ -1,0 +1,9 @@
+{
+  "buildCommand": "mkdir -p public/design public/samples/profile && cp -r ltef/web/. public/ && cp docs/design/technical-design.html docs/design/technical-design.pdf docs/design/evidence-matrix.csv docs/design/LTEF-technical-design.drawio docs/design/design-package.zip public/design/ && cp examples/cases.jsonl examples/observations.json public/samples/ && cp examples/profiles/finance.json public/samples/profile/finance",
+  "outputDirectory": "public",
+  "functions": {
+    "api/[...slug].py": {
+      "includeFiles": "ltef/**,examples/**"
+    }
+  }
+}

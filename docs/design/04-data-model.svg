@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 960" role="img" aria-labelledby="title-04-data-model">
+<title id="title-04-data-model">04 · Logical data and evidence model</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/></marker></defs>
+<rect width="1440" height="960" fill="white"/>
+<polyline points="364,243.0 438,243.0" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="401.0" y="233.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">1 : many</text>
+<polyline points="204,333 204,373 920,373 920,333" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="220.0" y="343.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">logical owner relationship</text>
+<polyline points="1107,333 1107,420" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="1123.0" y="366.5" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">embedded</text>
+<polyline points="364,733.0 438,733.0" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="401.0" y="723.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">case link</text>
+<polyline points="656,650 656,590 998,590 998,550" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="672.0" y="610.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">SHA-256</text>
+<polyline points="1165,650 1165,550" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="1181.0" y="590.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">SHA-256</text>
+<text x="44" y="65.6" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="700" fill="#253449">04 · Logical data and evidence model</text>
+<text x="44" y="111.26" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#253449">SQLite stores identity and derived reports; source input files are retained separately by the research team</text>
+<rect x="44" y="153" width="320" height="180" rx="10" fill="#edf3ff" stroke="#365cbd"/>
+<text x="204.0" y="211.8421052631579" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12.982456140350878" font-weight="700" fill="#163566">users</text>
+<text x="204.0" y="229.49824561403508" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12.982456140350878" font-weight="400" fill="#163566">id (PK) · name · email (unique)</text>
+<text x="204.0" y="247.15438596491228" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12.982456140350878" font-weight="400" fill="#163566">role: viewer / researcher / admin</text>
+<text x="204.0" y="264.8105263157895" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12.982456140350878" font-weight="400" fill="#163566">salt · password_hash · created</text>
+<text x="204.0" y="282.4666666666667" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12.982456140350878" font-weight="400" fill="#163566">Contains identity, not model credentials</text>
+<rect x="438" y="153" width="320" height="180" rx="10" fill="#edf3ff" stroke="#365cbd"/>
+<text x="598.0" y="205.2328548644338" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15.73631047315258" font-weight="700" fill="#163566">sessions</text>
+<text x="598.0" y="226.6342371079213" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15.73631047315258" font-weight="400" fill="#163566">token_hash (PK)</text>
+<text x="598.0" y="248.0356193514088" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15.73631047315258" font-weight="400" fill="#163566">user_id · csrf · expires</text>
+<text x="598.0" y="269.4370015948963" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15.73631047315258" font-weight="400" fill="#163566">12-hour expiration</text>
+<text x="598.0" y="290.83838383838383" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15.73631047315258" font-weight="400" fill="#163566">Current role resolved per request</text>
+<rect x="832" y="153" width="550" height="180" rx="10" fill="#edf3ff" stroke="#365cbd"/>
+<text x="1107.0" y="204.14496768236378" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.189596799015085" font-weight="700" fill="#163566">runs</text>
+<text x="1107.0" y="226.1628193290243" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.189596799015085" font-weight="400" fill="#163566">id (PK) · name</text>
+<text x="1107.0" y="248.18067097568482" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.189596799015085" font-weight="400" fill="#163566">owner_id · shared_sample</text>
+<text x="1107.0" y="270.1985226223453" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.189596799015085" font-weight="400" fill="#163566">report: serialized JSON, definitions + results + manifest</text>
+<text x="1107.0" y="292.2163742690059" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.189596799015085" font-weight="400" fill="#163566">Only original seed examples are shared</text>
+<rect x="44" y="420" width="320" height="130" rx="10" fill="#f4f6f9" stroke="#cbd5e1"/>
+<text x="204.0" y="460.859649122807" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14.035087719298245" font-weight="700" fill="#455469">auth_attempts</text>
+<text x="204.0" y="479.9473684210526" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14.035087719298245" font-weight="400" fill="#455469">address · attempted</text>
+<text x="204.0" y="499.03508771929825" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14.035087719298245" font-weight="400" fill="#455469">Index on address + attempted</text>
+<text x="204.0" y="518.1228070175439" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14.035087719298245" font-weight="400" fill="#455469">Bounded login / registration attempts</text>
+<rect x="832" y="420" width="550" height="130" rx="10" fill="#edf8f3" stroke="#6a9c84"/>
+<text x="1107.0" y="454.03999999999996" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#21533a">Report manifest</text>
+<text x="1107.0" y="478.52" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#21533a">dataset_sha256 · observations_sha256</text>
+<text x="1107.0" y="502.99999999999994" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#21533a">profile_sha256 · code_sha256</text>
+<text x="1107.0" y="527.48" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#21533a">Selected cases · trials · bootstrap settings</text>
+<rect x="44" y="650" width="320" height="166" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+<text x="204.0" y="696.343653250774" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15.273477812177504" font-weight="700" fill="#253449">Case dataset  ·  JSONL</text>
+<text x="204.0" y="717.1155830753354" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15.273477812177504" font-weight="400" fill="#253449">Case ID + messages + sector</text>
+<text x="204.0" y="737.8875128998968" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15.273477812177504" font-weight="400" fill="#253449">Reference / scopes / groups</text>
+<text x="204.0" y="758.6594427244581" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15.273477812177504" font-weight="400" fill="#253449">Canaries / agent policy (optional)</text>
+<text x="204.0" y="779.4313725490196" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15.273477812177504" font-weight="400" fill="#253449">Canonical messages digest per case</text>
+<rect x="438" y="650" width="436" height="166" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+<text x="656.0" y="693.5741626794259" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.427432216905903" font-weight="700" fill="#253449">Observation bundle  ·  JSON</text>
+<text x="656.0" y="715.9154704944178" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.427432216905903" font-weight="400" fill="#253449">Systems + versions + generation settings</text>
+<text x="656.0" y="738.2567783094099" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.427432216905903" font-weight="400" fill="#253449">Records keyed by (system_id, case_id, trial)</text>
+<text x="656.0" y="760.5980861244019" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.427432216905903" font-weight="400" fill="#253449">Prompt hash binds each record to messages</text>
+<text x="656.0" y="782.939393939394" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.427432216905903" font-weight="400" fill="#253449">Response/error + resources + labels + trace</text>
+<rect x="948" y="650" width="434" height="166" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+<text x="1165.0" y="692.2" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#253449">Evaluation profile  ·  JSON</text>
+<text x="1165.0" y="715.32" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#253449">ID + version + sector</text>
+<text x="1165.0" y="738.44" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#253449">Selected metrics + grouping dimensions</text>
+<text x="1165.0" y="761.5600000000001" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#253449">minimum_cases (starter: 20)</text>
+<text x="1165.0" y="784.6800000000001" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#253449">thresholds: {} in v0.1</text>
+<rect x="44" y="862" width="1338" height="55" rx="10" fill="#fff7e8" stroke="#d7ae62"/>
+<text x="713.0" y="893.6677074041035" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13.024085637823374" font-weight="700" fill="#78521d">Relationships shown are logical; the current SQLite schema does not declare SQL foreign keys. Hashes support reconstruction, not provider authentication or tamper-proof custody.</text>
+</svg>

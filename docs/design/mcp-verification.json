@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-20",
+  "server": {
+    "name": "drawio-mcp-app",
+    "version": "1.0.0"
+  },
+  "protocol": "2024-11-05",
+  "tools": [
+    "create_diagram",
+    "search_shapes"
+  ],
+  "tool_execution_tested": false,
+  "project_content_sent": false
+}

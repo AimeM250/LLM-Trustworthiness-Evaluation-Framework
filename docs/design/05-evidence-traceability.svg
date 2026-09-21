@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 960" role="img" aria-labelledby="title-05-evidence-traceability">
+<title id="title-05-evidence-traceability">05 · Requirement-to-evidence chain</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/></marker></defs>
+<rect width="1440" height="960" fill="white"/>
+<polyline points="426,232.0 528,232.0" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="477.0" y="222.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">specifies</text>
+<polyline points="910,232.0 1010,232.0" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="960.0" y="222.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">realizes</text>
+<polyline points="1201,303 1201,416" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="1217.0" y="349.5" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">checks behavior</text>
+<polyline points="1010,491 910,491" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="960.0" y="481.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">supports review</text>
+<polyline points="528,491 426,491" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="477.0" y="481.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">bounds the claim</text>
+<polyline points="204,678 204,566" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)" stroke-dasharray="7 5"/>
+<text x="220.0" y="612.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">thematic inputs</text>
+<polyline points="948,678 948,611 720,611 720,566" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)" stroke-dasharray="7 5"/>
+<text x="964.0" y="634.5" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">future substantiation</text>
+<text x="44" y="65.6" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="700" fill="#253449">05 · Requirement-to-evidence chain</text>
+<text x="44" y="111.26" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#253449">A traceable claim links a business need to executable behavior, a check, and preserved evidence</text>
+<rect x="44" y="161" width="382" height="142" rx="10" fill="#142b4b" stroke="#142b4b"/>
+<text x="235.0" y="204.30049482681062" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.104363472784527" font-weight="700" fill="#ffffff">Business need</text>
+<text x="235.0" y="226.20242914979758" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.104363472784527" font-weight="400" fill="#ffffff">BR-001…BR-028 in evidence-matrix.csv</text>
+<text x="235.0" y="248.10436347278454" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.104363472784527" font-weight="400" fill="#ffffff">Intended user outcome + acceptance rule</text>
+<text x="235.0" y="270.0062977957715" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.104363472784527" font-weight="400" fill="#ffffff">Scope, owner and status are explicit</text>
+<rect x="528" y="161" width="382" height="142" rx="10" fill="#edf3ff" stroke="#365cbd"/>
+<text x="719.0" y="201.04" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#163566">Technical design</text>
+<text x="719.0" y="225.51999999999998" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#163566">Architecture + contracts + roles</text>
+<text x="719.0" y="250.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#163566">Metric prerequisites + missingness</text>
+<text x="719.0" y="274.48" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#163566">Decisions and production gaps</text>
+<rect x="1010" y="161" width="382" height="142" rx="10" fill="#edf3ff" stroke="#365cbd"/>
+<text x="1201.0" y="201.13483709273183" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17.94486215538847" font-weight="700" fill="#163566">Implementation</text>
+<text x="1201.0" y="225.53984962406014" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17.94486215538847" font-weight="400" fill="#163566">Named module and function</text>
+<text x="1201.0" y="249.94486215538848" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17.94486215538847" font-weight="400" fill="#163566">Server checks + scoring rules</text>
+<text x="1201.0" y="274.3498746867168" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17.94486215538847" font-weight="400" fill="#163566">Native UI supports the user journey</text>
+<rect x="1010" y="416" width="382" height="150" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+<text x="1201.0" y="453.31578947368416" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15.701754385964914" font-weight="700" fill="#253449">Verification</text>
+<text x="1201.0" y="474.67017543859646" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15.701754385964914" font-weight="400" fill="#253449">Named unit / API / browser tests</text>
+<text x="1201.0" y="496.02456140350876" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15.701754385964914" font-weight="400" fill="#253449">Commands + dated output</text>
+<text x="1201.0" y="517.378947368421" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15.701754385964914" font-weight="400" fill="#253449">Readiness + access checks verified</text>
+<text x="1201.0" y="538.7333333333333" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15.701754385964914" font-weight="400" fill="#253449">Test presence alone is not a pass record</text>
+<rect x="528" y="416" width="382" height="150" rx="10" fill="#edf8f3" stroke="#6a9c84"/>
+<text x="719.0" y="451.3324099722992" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.528162511542014" font-weight="700" fill="#21533a">Evidence artifact</text>
+<text x="719.0" y="473.81071098799634" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.528162511542014" font-weight="400" fill="#21533a">Report + manifest + input snapshot</text>
+<text x="719.0" y="496.28901200369353" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.528162511542014" font-weight="400" fill="#21533a">Rubric + reviewer record + raw capture</text>
+<text x="719.0" y="518.7673130193906" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.528162511542014" font-weight="400" fill="#21533a">Version / runtime / command log</text>
+<text x="719.0" y="541.2456140350878" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.528162511542014" font-weight="400" fill="#21533a">Only derived reports live in SQLite</text>
+<rect x="44" y="416" width="382" height="150" rx="10" fill="#fff7e8" stroke="#d7ae62"/>
+<text x="235.0" y="455.11027568922304" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14.95405179615706" font-weight="700" fill="#78521d">Permissible conclusion</text>
+<text x="235.0" y="475.4477861319966" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14.95405179615706" font-weight="400" fill="#78521d">Implementation behavior is testable</text>
+<text x="235.0" y="495.78529657477026" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14.95405179615706" font-weight="400" fill="#78521d">Synthetic outcomes prove fixture behavior</text>
+<text x="235.0" y="516.1228070175439" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14.95405179615706" font-weight="400" fill="#78521d">Real sector performance needs real data</text>
+<text x="235.0" y="536.4603174603175" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14.95405179615706" font-weight="400" fill="#78521d">No certification or validated global score</text>
+<rect x="44" y="678" width="640" height="158" rx="10" fill="#f4f6f9" stroke="#cbd5e1"/>
+<text x="364.0" y="716.2" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#455469">Research basis</text>
+<text x="364.0" y="739.32" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#455469">P-4: reproducibility and multiple evaluation dimensions</text>
+<text x="364.0" y="762.44" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#455469">P-5: clinical context, grounding and privacy</text>
+<text x="364.0" y="785.5600000000001" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#455469">P-6: disaggregation and controlled pairs</text>
+<text x="364.0" y="808.6800000000001" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#455469">P-7: threat models, attacks and utility retention</text>
+<rect x="758" y="678" width="634" height="158" rx="10" fill="#f4f6f9" stroke="#cbd5e1"/>
+<text x="1075.0" y="716.2" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#455469">Next evidence milestone</text>
+<text x="1075.0" y="739.32" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#455469">Freeze one independently reviewed sector dataset</text>
+<text x="1075.0" y="762.44" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#455469">Capture a real single-agent baseline + agent candidate</text>
+<text x="1075.0" y="785.5600000000001" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#455469">Validate rubrics, trace completeness and sample design</text>
+<text x="1075.0" y="808.6800000000001" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#455469">Retain adverse outcomes and matched compute budgets</text>
+<rect x="44" y="881" width="1348" height="38" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+<text x="718.0" y="904.3467733661639" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13.58366676926234" font-weight="700" fill="#253449">Paper alignment is thematic. Multi-agent metrics and product authorization rules are implementation extensions; neither is established as validated by the supplied papers.</text>
+</svg>

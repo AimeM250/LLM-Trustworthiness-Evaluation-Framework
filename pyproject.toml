@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ltef"
+version = "0.1.0"
+description = "Reproducible LLM and multi-agent evaluation with sector profiles"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Aime Munezero", email = "munezeroaime8@gmail.com" }]
+requires-python = ">=3.9"
+dependencies = []
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Testing",
+]
+
+[project.urls]
+Homepage = "https://github.com/AimeM250/LLM-Trustworthiness-Evaluation-Framework"
+Repository = "https://github.com/AimeM250/LLM-Trustworthiness-Evaluation-Framework"
+Issues = "https://github.com/AimeM250/LLM-Trustworthiness-Evaluation-Framework/issues"
+
+[project.scripts]
+ltef = "ltef.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ltef*"]
+
+[tool.setuptools.package-data]
+ltef = ["web/*.html", "web/*.css", "web/*.js", "web/*.svg", "web/fonts/*.ttf", "web/fonts/*OFL.txt"]

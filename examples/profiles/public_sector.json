@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "public_sector-research",
+  "version": "0.1",
+  "sector": "public_sector",
+  "minimum_cases": 20,
+  "thresholds": {},
+  "group_dimensions": [
+    "persona"
+  ],
+  "metrics": [
+    "reference_accuracy",
+    "supported_claim_fraction",
+    "major_clinical_error_rate",
+    "canary_disclosure_rate",
+    "attack_success_rate",
+    "benign_refusal_rate",
+    "escalation_rate",
+    "brier_score",
+    "latency_ms",
+    "total_tokens",
+    "cost_usd",
+    "task_success_rate",
+    "unauthorized_tool_attempt_rate",
+    "unauthorized_tool_execution_rate",
+    "handoff_completion_rate",
+    "step_budget_exceedance_rate",
+    "trace_canary_disclosure_rate",
+    "propagated_error_rate"
+  ],
+  "status": "uncalibrated research profile; no regulatory or deployment thresholds",
+  "intended_use": "Fictional library service: extended borrowing requires 12 months of membership. This is a synthetic rule, not a real benefits policy."
+}

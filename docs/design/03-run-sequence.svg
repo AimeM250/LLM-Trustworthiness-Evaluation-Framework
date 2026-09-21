@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 960" role="img" aria-labelledby="title-03-run-sequence">
+<title id="title-03-run-sequence">03 · Request and evaluation sequence</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/></marker></defs>
+<rect width="1440" height="960" fill="white"/>
+<polyline points="156,272 398,272" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="277.0" y="262.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">1. GET bootstrap / sign in</text>
+<polyline points="398,318 640,318" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="519.0" y="308.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">2. Resolve session and current role</text>
+<polyline points="640,364 1166,364" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="903.0" y="354.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">3. Read user + session; never expose password hashes</text>
+<polyline points="156,425 398,425" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="277.0" y="415.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">4. POST /api/validate · three file contents</text>
+<polyline points="398,473 882,473" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="640.0" y="463.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">5. Authenticate + authorize + validate + assess availability</text>
+<polyline points="882,521 156,521" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)" stroke-dasharray="7 5"/>
+<text x="519.0" y="511.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">6. Return readiness only · no saved evaluation</text>
+<polyline points="156,587 398,587" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="277.0" y="577.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">7. POST /api/runs · current three files + name</text>
+<polyline points="398,635 882,635" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="640.0" y="625.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">8. Revalidate · score · aggregate · hash inputs and code</text>
+<polyline points="882,685 1166,685" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="1024.0" y="675.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">9. Save derived report with creator owner_id</text>
+<polyline points="1166,735 398,735" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)" stroke-dasharray="7 5"/>
+<text x="782.0" y="725.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">10. Ownership check + allowed metric filtering</text>
+<polyline points="398,785 156,785" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)" stroke-dasharray="7 5"/>
+<text x="277.0" y="775.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">11. Return report; later reads repeat access checks</text>
+<text x="44" y="65.6" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="700" fill="#253449">03 · Request and evaluation sequence</text>
+<text x="44" y="111.26" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#253449">Authorization applies to direct API requests; the evaluation endpoint never trusts an earlier preflight</text>
+<rect x="48" y="145" width="216" height="68" rx="10" fill="#142b4b" stroke="#142b4b"/>
+<text x="156.0" y="184.76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#ffffff">Browser</text>
+<rect x="155" y="234" width="2" height="622" rx="10" fill="#f4f6f9" stroke="#cbd5e1"/>
+<text x="156.0" y="545.32" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="1" font-weight="700" fill="#455469"></text>
+<rect x="290" y="145" width="216" height="68" rx="10" fill="#142b4b" stroke="#142b4b"/>
+<text x="398.0" y="184.76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#ffffff">HTTP handler</text>
+<rect x="397" y="234" width="2" height="622" rx="10" fill="#f4f6f9" stroke="#cbd5e1"/>
+<text x="398.0" y="545.32" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="1" font-weight="700" fill="#455469"></text>
+<rect x="532" y="145" width="216" height="68" rx="10" fill="#142b4b" stroke="#142b4b"/>
+<text x="640.0" y="184.76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#ffffff">Auth + access</text>
+<rect x="639" y="234" width="2" height="622" rx="10" fill="#f4f6f9" stroke="#cbd5e1"/>
+<text x="640.0" y="545.32" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="1" font-weight="700" fill="#455469"></text>
+<rect x="774" y="145" width="216" height="68" rx="10" fill="#142b4b" stroke="#142b4b"/>
+<text x="882.0" y="184.76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#ffffff">Validator / scorer</text>
+<rect x="881" y="234" width="2" height="622" rx="10" fill="#f4f6f9" stroke="#cbd5e1"/>
+<text x="882.0" y="545.32" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="1" font-weight="700" fill="#455469"></text>
+<rect x="1058" y="145" width="216" height="68" rx="10" fill="#142b4b" stroke="#142b4b"/>
+<text x="1166.0" y="184.76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#ffffff">SQLite workspace</text>
+<rect x="1165" y="234" width="2" height="622" rx="10" fill="#f4f6f9" stroke="#cbd5e1"/>
+<text x="1166.0" y="545.32" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="1" font-weight="700" fill="#455469"></text>
+<rect x="48" y="875" width="1292" height="44" rx="10" fill="#f4f6f9" stroke="#cbd5e1"/>
+<text x="694.0" y="901.3406076166025" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13.564398801882756" font-weight="700" fill="#455469">INVALID RUN → 400; INVALID PREFLIGHT → 200 + valid:false   ·   NO SESSION → 401   ·   NO PERMISSION → 403   ·   INACCESSIBLE REPORT → 404   ·   BUSY EVALUATOR → 409</text>
+</svg>

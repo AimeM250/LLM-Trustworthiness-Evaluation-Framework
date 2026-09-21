@@ -1,0 +1,524 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="LTEF local design generator" version="24.7.17" type="device">
+  <diagram id="01-architecture" name="01 · System architecture">
+    <mxGraphModel dx="1440" dy="960" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1440" pageHeight="960" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="edge0" value="uses" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="user" target="browser">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="264" y="234.0" as="sourcePoint" />
+            <mxPoint x="334" y="234.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge1" value="same origin" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="browser" target="http">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="618" y="234.0" as="sourcePoint" />
+            <mxPoint x="698" y="234.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge2" value="each request" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="http" target="auth">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="998" y="234.0" as="sourcePoint" />
+            <mxPoint x="1080" y="234.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge3" value="upload locally" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="inputs" target="readiness">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="294" y="467.0" as="sourcePoint" />
+            <mxPoint x="368" y="467.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge4" value="validate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="readiness" target="validation">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="648" y="467.0" as="sourcePoint" />
+            <mxPoint x="726" y="467.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge5" value="valid inputs" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="validation" target="scoring">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="996" y="467.0" as="sourcePoint" />
+            <mxPoint x="1080" y="467.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge6" value="dispatch" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="http" target="validation">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="848" y="303" as="sourcePoint" />
+            <mxPoint x="861" y="392" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="848" y="350" />
+              <mxPoint x="861" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge7" value="captured evidence" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;dashed=1;exitX=0.5;exitY=0.0;exitPerimeter=0;entryX=0.5;entryY=1.0;entryPerimeter=0;" edge="1" parent="1" source="external" target="inputs">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="169" y="634" as="sourcePoint" />
+            <mxPoint x="169" y="542" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=0.0;exitY=0.5068493150684932;exitPerimeter=0;entryX=0.8;entryY=1.0;entryPerimeter=0;" edge="1" parent="1" source="review" target="inputs">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="368" y="708" as="sourcePoint" />
+            <mxPoint x="244" y="542" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="326" y="708" />
+              <mxPoint x="326" y="570" />
+              <mxPoint x="244" y="570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge9" value="save report" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=0.23178807947019867;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="scoring" target="database">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1150" y="542" as="sourcePoint" />
+            <mxPoint x="861" y="634" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1150" y="590" />
+              <mxPoint x="861" y="590" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge10" value="read" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="database" target="outputs">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="996" y="707.0" as="sourcePoint" />
+            <mxPoint x="1080" y="707.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="title" value="01 · System architecture" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=none;fontColor=#253449;fontFamily=Helvetica;fontSize=30;align=left;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="44" y="32" width="1350" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Local research workspace · external execution supplies evidence through files" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=none;fontColor=#253449;fontFamily=Helvetica;fontSize=18;align=left;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="44" y="88" width="1350" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="user" value="Research team&#10;Viewer · Researcher&#10;Administrator" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#142b4b;strokeColor=#142b4b;fontColor=#ffffff;fontFamily=Helvetica;fontSize=18.097876269621423;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="44" y="165" width="220" height="138" as="geometry" />
+        </mxCell>
+        <mxCell id="browser" value="Browser workspace&#10;Sign in · choose metrics&#10;Provide data · review results" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#edf3ff;strokeColor=#365cbd;fontColor=#163566;fontFamily=Helvetica;fontSize=15.728977616454932;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="334" y="165" width="284" height="138" as="geometry" />
+        </mxCell>
+        <mxCell id="http" value="Local HTTP API&#10;127.0.0.1:8765&#10;Host / Origin / request token" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#edf3ff;strokeColor=#365cbd;fontColor=#163566;fontFamily=Helvetica;fontSize=16.69691470054447;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="698" y="165" width="300" height="138" as="geometry" />
+        </mxCell>
+        <mxCell id="auth" value="Access control&#10;Session + current role&#10;Ownership + metric filtering" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#edf3ff;strokeColor=#365cbd;fontColor=#163566;fontFamily=Helvetica;fontSize=17.41854636591479;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="165" width="302" height="138" as="geometry" />
+        </mxCell>
+        <mxCell id="inputs" value="Research input files&#10;cases.jsonl&#10;observations.json&#10;profile.json" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#cbd5e1;fontColor=#253449;fontFamily=Helvetica;fontSize=18;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="44" y="392" width="250" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="readiness" value="Data readiness&#10;Requirements + starter ZIP&#10;Non-persistent preflight&#10;Verified unit / API&#10;and browser checks" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#edf3ff;strokeColor=#365cbd;fontColor=#163566;fontFamily=Helvetica;fontSize=17;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="368" y="392" width="280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="validation" value="Schema validation&#10;Types · IDs · prompt hash&#10;Scope · trace ordering&#10;Missingness remains explicit" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#edf3ff;strokeColor=#365cbd;fontColor=#163566;fontFamily=Helvetica;fontSize=15.413533834586467;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="726" y="392" width="270" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="scoring" value="Evaluation engine&#10;18 scorers + summaries&#10;Case-weighted statistics&#10;Paired comparisons" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#edf3ff;strokeColor=#365cbd;fontColor=#163566;fontFamily=Helvetica;fontSize=17;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="392" width="302" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="external" value="External model / agent runner&#10;Capture responses + failures&#10;Capture resources + traces&#10;No live provider connector" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff7e8;strokeColor=#d7ae62;fontColor=#78521d;fontFamily=Helvetica;fontSize=13.672111312764672;align=center;verticalAlign=middle;spacing=12;arcSize=8;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="44" y="634" width="250" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="review" value="Independent review&#10;References + claim evidence&#10;Outcome / safety labels&#10;Rubric + evaluator identity" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#cbd5e1;fontColor=#253449;fontFamily=Helvetica;fontSize=16.634178037686812;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="368" y="634" width="280" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="database" value="Local SQLite&#10;Accounts · sessions&#10;Reports + owner / sample flag&#10;No raw response archive" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#edf3ff;strokeColor=#365cbd;fontColor=#163566;fontFamily=Helvetica;fontSize=14.88203266787659;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="726" y="634" width="270" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="outputs" value="Reviewable outputs&#10;Role-filtered result pages&#10;JSON / Markdown exports&#10;Manifest + coverage + caveats" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#edf8f3;strokeColor=#6a9c84;fontColor=#21533a;fontFamily=Helvetica;fontSize=16.81790683605566;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="634" width="302" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="boundary" value="DEPLOYMENT BOUNDARY   One device · loopback HTTP · local files and database · no public hosting, cloud sync or provider API calls" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f4f6f9;strokeColor=#cbd5e1;fontColor=#455469;fontFamily=Helvetica;fontSize=17;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="44" y="842" width="1338" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="02-data-readiness" name="02 · Data provision and readiness">
+    <mxGraphModel dx="1440" dy="960" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1440" pageHeight="960" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="edge0" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="step1" target="step2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="444" y="221.0" as="sourcePoint" />
+            <mxPoint x="518" y="221.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="step2" target="step3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="918" y="221.0" as="sourcePoint" />
+            <mxPoint x="992" y="221.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge2" value="assemble all three" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="step3" target="observations">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1192" y="292" as="sourcePoint" />
+            <mxPoint x="718" y="372" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1192" y="330" />
+              <mxPoint x="718" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge3" value="three-file check" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="cases" target="preflight">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="244" y="532" as="sourcePoint" />
+            <mxPoint x="244" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.84;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="observations" target="preflight">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="718" y="532" as="sourcePoint" />
+            <mxPoint x="380" y="630" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="718" y="581" />
+              <mxPoint x="380" y="581" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.9525;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="profile" target="preflight">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1192" y="532" as="sourcePoint" />
+            <mxPoint x="425" y="630" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1192" y="605" />
+              <mxPoint x="425" y="605" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge6" value="valid structure" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="preflight" target="run">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="444" y="703.0" as="sourcePoint" />
+            <mxPoint x="518" y="703.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge7" value="saved report" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="run" target="inspect">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="918" y="703.0" as="sourcePoint" />
+            <mxPoint x="992" y="703.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="title" value="02 · Data provision and readiness" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=none;fontColor=#253449;fontFamily=Helvetica;fontSize=30;align=left;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="44" y="32" width="1350" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Prepare only the evidence your selected metrics need; validation is not scientific validation" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=none;fontColor=#253449;fontFamily=Helvetica;fontSize=18;align=left;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="44" y="88" width="1350" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="step1" value="01  Choose scope&#10;Sector + use case + systems&#10;Select metrics allowed by your role&#10;Define population and failure criteria" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#edf3ff;strokeColor=#365cbd;fontColor=#163566;fontFamily=Helvetica;fontSize=17.359187442289937;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="44" y="150" width="400" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="step2" value="02  Download starter files&#10;Selected metric profile + synthetic example&#10;Read metric-specific requirements&#10;Replace fixtures with your own evidence" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#edf3ff;strokeColor=#365cbd;fontColor=#163566;fontFamily=Helvetica;fontSize=15.340677274581804;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="518" y="150" width="400" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="step3" value="03  Capture and review&#10;Run systems outside the web workspace&#10;Retain every declared trial and failure&#10;Add required annotations / complete traces" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#cbd5e1;fontColor=#253449;fontFamily=Helvetica;fontSize=15.705931495405181;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="992" y="150" width="400" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="cases" value="cases.jsonl  ·  Test definition&#10;IDs · sector · provenance · prompts&#10;References or scope flags as required&#10;Groups / canaries / agent policy if used&#10;Owner: dataset author + domain reviewer" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#cbd5e1;fontColor=#253449;fontFamily=Helvetica;fontSize=16.491228070175442;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="44" y="372" width="400" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="observations" value="observations.json  ·  Evidence&#10;Systems + versions + declared trials&#10;Response or error + canonical prompt hash&#10;Measurements / labels / trace events&#10;Owner: collection engineer + adjudicators" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#cbd5e1;fontColor=#253449;fontFamily=Helvetica;fontSize=16.08900299529311;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="518" y="372" width="400" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="profile" value="profile.json  ·  Measurement plan&#10;Sector + selected metric identifiers&#10;Grouping dimensions + minimum_cases&#10;Version + empty thresholds object&#10;Owner: study lead" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#cbd5e1;fontColor=#253449;fontFamily=Helvetica;fontSize=18;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="992" y="372" width="400" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="preflight" value="04  Check readiness&#10;Validate all three files and prompt hashes&#10;Show per-metric evidence availability&#10;Explain missing / inapplicable inputs&#10;No report saved by this check" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff7e8;strokeColor=#d7ae62;fontColor=#78521d;fontFamily=Helvetica;fontSize=15.705931495405181;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="44" y="630" width="400" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="run" value="05  Run evaluation&#10;Revalidate the current input files&#10;Score each declared case/system/trial&#10;Aggregate cases; show coverage&#10;Save only the derived report" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#edf3ff;strokeColor=#365cbd;fontColor=#163566;fontFamily=Helvetica;fontSize=17.828354670459934;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="518" y="630" width="400" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="inspect" value="06  Inspect evidence&#10;Read scope + denominators + warnings&#10;Check failures alongside quality means&#10;Export report and retain source inputs&#10;Publish only claims supported by evidence" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#edf8f3;strokeColor=#6a9c84;fontColor=#21533a;fontFamily=Helvetica;fontSize=16.08900299529311;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="992" y="630" width="400" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="states" value="SCORING STATES   Scored = evidence supplied   ·   Missing = required evidence absent   ·   Error = declared failure   ·   N/A = outside the metric’s scope" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f4f6f9;strokeColor=#cbd5e1;fontColor=#455469;fontFamily=Helvetica;fontSize=15.083162451583506;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="44" y="845" width="1348" height="58" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="03-run-sequence" name="03 · Request and evaluation sequence">
+    <mxGraphModel dx="1440" dy="960" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1440" pageHeight="960" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="edge0" value="1. GET bootstrap / sign in" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0.06109324758842444;exitPerimeter=0;entryX=0.5;entryY=0.06109324758842444;entryPerimeter=0;" edge="1" parent="1" source="uiline" target="apiline">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="156" y="272" as="sourcePoint" />
+            <mxPoint x="398" y="272" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge1" value="2. Resolve session and current role" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0.13504823151125403;exitPerimeter=0;entryX=0.5;entryY=0.13504823151125403;entryPerimeter=0;" edge="1" parent="1" source="apiline" target="authline">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="398" y="318" as="sourcePoint" />
+            <mxPoint x="640" y="318" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge2" value="3. Read user + session; never expose password hashes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0.2090032154340836;exitPerimeter=0;entryX=0.5;entryY=0.2090032154340836;entryPerimeter=0;" edge="1" parent="1" source="authline" target="dbline">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="364" as="sourcePoint" />
+            <mxPoint x="1166" y="364" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge3" value="4. POST /api/validate · three file contents" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0.3070739549839228;exitPerimeter=0;entryX=0.5;entryY=0.3070739549839228;entryPerimeter=0;" edge="1" parent="1" source="uiline" target="apiline">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="156" y="425" as="sourcePoint" />
+            <mxPoint x="398" y="425" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge4" value="5. Authenticate + authorize + validate + assess availability" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0.3842443729903537;exitPerimeter=0;entryX=0.5;entryY=0.3842443729903537;entryPerimeter=0;" edge="1" parent="1" source="apiline" target="valline">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="398" y="473" as="sourcePoint" />
+            <mxPoint x="882" y="473" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge5" value="6. Return readiness only · no saved evaluation" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;dashed=1;exitX=0.5;exitY=0.46141479099678456;exitPerimeter=0;entryX=0.5;entryY=0.46141479099678456;entryPerimeter=0;" edge="1" parent="1" source="valline" target="uiline">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="882" y="521" as="sourcePoint" />
+            <mxPoint x="156" y="521" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge6" value="7. POST /api/runs · current three files + name" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0.567524115755627;exitPerimeter=0;entryX=0.5;entryY=0.567524115755627;entryPerimeter=0;" edge="1" parent="1" source="uiline" target="apiline">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="156" y="587" as="sourcePoint" />
+            <mxPoint x="398" y="587" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge7" value="8. Revalidate · score · aggregate · hash inputs and code" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0.6446945337620579;exitPerimeter=0;entryX=0.5;entryY=0.6446945337620579;entryPerimeter=0;" edge="1" parent="1" source="apiline" target="valline">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="398" y="635" as="sourcePoint" />
+            <mxPoint x="882" y="635" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge8" value="9. Save derived report with creator owner_id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0.72508038585209;exitPerimeter=0;entryX=0.5;entryY=0.72508038585209;entryPerimeter=0;" edge="1" parent="1" source="valline" target="dbline">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="882" y="685" as="sourcePoint" />
+            <mxPoint x="1166" y="685" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge9" value="10. Ownership check + allowed metric filtering" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;dashed=1;exitX=0.5;exitY=0.8054662379421221;exitPerimeter=0;entryX=0.5;entryY=0.8054662379421221;entryPerimeter=0;" edge="1" parent="1" source="dbline" target="apiline">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1166" y="735" as="sourcePoint" />
+            <mxPoint x="398" y="735" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge10" value="11. Return report; later reads repeat access checks" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;dashed=1;exitX=0.5;exitY=0.8858520900321544;exitPerimeter=0;entryX=0.5;entryY=0.8858520900321544;entryPerimeter=0;" edge="1" parent="1" source="apiline" target="uiline">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="398" y="785" as="sourcePoint" />
+            <mxPoint x="156" y="785" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="title" value="03 · Request and evaluation sequence" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=none;fontColor=#253449;fontFamily=Helvetica;fontSize=30;align=left;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="44" y="32" width="1350" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Authorization applies to direct API requests; the evaluation endpoint never trusts an earlier preflight" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=none;fontColor=#253449;fontFamily=Helvetica;fontSize=18;align=left;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="44" y="88" width="1350" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="ui" value="Browser" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#142b4b;strokeColor=#142b4b;fontColor=#ffffff;fontFamily=Helvetica;fontSize=18;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="48" y="145" width="216" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="uiline" value="" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f4f6f9;strokeColor=#cbd5e1;fontColor=#455469;fontFamily=Helvetica;fontSize=1;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="155" y="234" width="2" height="622" as="geometry" />
+        </mxCell>
+        <mxCell id="api" value="HTTP handler" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#142b4b;strokeColor=#142b4b;fontColor=#ffffff;fontFamily=Helvetica;fontSize=18;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="290" y="145" width="216" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="apiline" value="" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f4f6f9;strokeColor=#cbd5e1;fontColor=#455469;fontFamily=Helvetica;fontSize=1;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="397" y="234" width="2" height="622" as="geometry" />
+        </mxCell>
+        <mxCell id="auth" value="Auth + access" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#142b4b;strokeColor=#142b4b;fontColor=#ffffff;fontFamily=Helvetica;fontSize=18;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="532" y="145" width="216" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="authline" value="" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f4f6f9;strokeColor=#cbd5e1;fontColor=#455469;fontFamily=Helvetica;fontSize=1;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="639" y="234" width="2" height="622" as="geometry" />
+        </mxCell>
+        <mxCell id="val" value="Validator / scorer" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#142b4b;strokeColor=#142b4b;fontColor=#ffffff;fontFamily=Helvetica;fontSize=18;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="774" y="145" width="216" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="valline" value="" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f4f6f9;strokeColor=#cbd5e1;fontColor=#455469;fontFamily=Helvetica;fontSize=1;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="881" y="234" width="2" height="622" as="geometry" />
+        </mxCell>
+        <mxCell id="db" value="SQLite workspace" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#142b4b;strokeColor=#142b4b;fontColor=#ffffff;fontFamily=Helvetica;fontSize=18;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="1058" y="145" width="216" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="dbline" value="" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f4f6f9;strokeColor=#cbd5e1;fontColor=#455469;fontFamily=Helvetica;fontSize=1;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="1165" y="234" width="2" height="622" as="geometry" />
+        </mxCell>
+        <mxCell id="note" value="INVALID RUN → 400; INVALID PREFLIGHT → 200 + valid:false   ·   NO SESSION → 401   ·   NO PERMISSION → 403   ·   INACCESSIBLE REPORT → 404   ·   BUSY EVALUATOR → 409" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f4f6f9;strokeColor=#cbd5e1;fontColor=#455469;fontFamily=Helvetica;fontSize=13.564398801882756;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="48" y="875" width="1292" height="44" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="04-data-model" name="04 · Logical data and evidence model">
+    <mxGraphModel dx="1440" dy="960" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1440" pageHeight="960" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="edge0" value="1 : many" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="users" target="sessions">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="364" y="243.0" as="sourcePoint" />
+            <mxPoint x="438" y="243.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge1" value="logical owner relationship" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.16;entryY=1.0;entryPerimeter=0;" edge="1" parent="1" source="users" target="runs">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="204" y="333" as="sourcePoint" />
+            <mxPoint x="920" y="333" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="204" y="373" />
+              <mxPoint x="920" y="373" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge2" value="embedded" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="runs" target="manifest">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1107" y="333" as="sourcePoint" />
+            <mxPoint x="1107" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge3" value="case link" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="cases" target="bundle">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="364" y="733.0" as="sourcePoint" />
+            <mxPoint x="438" y="733.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge4" value="SHA-256" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0.0;exitPerimeter=0;entryX=0.3018181818181818;entryY=1.0;entryPerimeter=0;" edge="1" parent="1" source="bundle" target="manifest">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="656" y="650" as="sourcePoint" />
+            <mxPoint x="998" y="550" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="656" y="590" />
+              <mxPoint x="998" y="590" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge5" value="SHA-256" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0.0;exitPerimeter=0;entryX=0.6054545454545455;entryY=1.0;entryPerimeter=0;" edge="1" parent="1" source="profile" target="manifest">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1165" y="650" as="sourcePoint" />
+            <mxPoint x="1165" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="title" value="04 · Logical data and evidence model" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=none;fontColor=#253449;fontFamily=Helvetica;fontSize=30;align=left;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="44" y="32" width="1350" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="SQLite stores identity and derived reports; source input files are retained separately by the research team" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=none;fontColor=#253449;fontFamily=Helvetica;fontSize=18;align=left;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="44" y="88" width="1350" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="users" value="users&#10;id (PK) · name · email (unique)&#10;role: viewer / researcher / admin&#10;salt · password_hash · created&#10;Contains identity, not model credentials" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#edf3ff;strokeColor=#365cbd;fontColor=#163566;fontFamily=Helvetica;fontSize=12.982456140350878;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="44" y="153" width="320" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="sessions" value="sessions&#10;token_hash (PK)&#10;user_id · csrf · expires&#10;12-hour expiration&#10;Current role resolved per request" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#edf3ff;strokeColor=#365cbd;fontColor=#163566;fontFamily=Helvetica;fontSize=15.73631047315258;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="438" y="153" width="320" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="runs" value="runs&#10;id (PK) · name&#10;owner_id · shared_sample&#10;report: serialized JSON, definitions + results + manifest&#10;Only original seed examples are shared" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#edf3ff;strokeColor=#365cbd;fontColor=#163566;fontFamily=Helvetica;fontSize=16.189596799015085;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="832" y="153" width="550" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="attempts" value="auth_attempts&#10;address · attempted&#10;Index on address + attempted&#10;Bounded login / registration attempts" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f4f6f9;strokeColor=#cbd5e1;fontColor=#455469;fontFamily=Helvetica;fontSize=14.035087719298245;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="44" y="420" width="320" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="manifest" value="Report manifest&#10;dataset_sha256 · observations_sha256&#10;profile_sha256 · code_sha256&#10;Selected cases · trials · bootstrap settings" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#edf8f3;strokeColor=#6a9c84;fontColor=#21533a;fontFamily=Helvetica;fontSize=18;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="832" y="420" width="550" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="cases" value="Case dataset  ·  JSONL&#10;Case ID + messages + sector&#10;Reference / scopes / groups&#10;Canaries / agent policy (optional)&#10;Canonical messages digest per case" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#cbd5e1;fontColor=#253449;fontFamily=Helvetica;fontSize=15.273477812177504;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="44" y="650" width="320" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="bundle" value="Observation bundle  ·  JSON&#10;Systems + versions + generation settings&#10;Records keyed by (system_id, case_id, trial)&#10;Prompt hash binds each record to messages&#10;Response/error + resources + labels + trace" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#cbd5e1;fontColor=#253449;fontFamily=Helvetica;fontSize=16.427432216905903;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="438" y="650" width="436" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="profile" value="Evaluation profile  ·  JSON&#10;ID + version + sector&#10;Selected metrics + grouping dimensions&#10;minimum_cases (starter: 20)&#10;thresholds: {} in v0.1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#cbd5e1;fontColor=#253449;fontFamily=Helvetica;fontSize=17;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="948" y="650" width="434" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="note" value="Relationships shown are logical; the current SQLite schema does not declare SQL foreign keys. Hashes support reconstruction, not provider authentication or tamper-proof custody." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff7e8;strokeColor=#d7ae62;fontColor=#78521d;fontFamily=Helvetica;fontSize=13.024085637823374;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="44" y="862" width="1338" height="55" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="05-evidence-traceability" name="05 · Requirement-to-evidence chain">
+    <mxGraphModel dx="1440" dy="960" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1440" pageHeight="960" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="edge0" value="specifies" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="need" target="design">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="426" y="232.0" as="sourcePoint" />
+            <mxPoint x="528" y="232.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge1" value="realizes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="design" target="code">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="910" y="232.0" as="sourcePoint" />
+            <mxPoint x="1010" y="232.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge2" value="checks behavior" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="code" target="checks">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1201" y="303" as="sourcePoint" />
+            <mxPoint x="1201" y="416" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge3" value="supports review" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=0.0;exitY=0.5;exitPerimeter=0;entryX=1.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="checks" target="evidence">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1010" y="491" as="sourcePoint" />
+            <mxPoint x="910" y="491" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge4" value="bounds the claim" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;exitX=0.0;exitY=0.5;exitPerimeter=0;entryX=1.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="evidence" target="claim">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="528" y="491" as="sourcePoint" />
+            <mxPoint x="426" y="491" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge5" value="thematic inputs" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;dashed=1;exitX=0.25;exitY=0.0;exitPerimeter=0;entryX=0.418848167539267;entryY=1.0;entryPerimeter=0;" edge="1" parent="1" source="research" target="claim">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="204" y="678" as="sourcePoint" />
+            <mxPoint x="204" y="566" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge6" value="future substantiation" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#64748b;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;fontColor=#455469;labelBackgroundColor=#ffffff;dashed=1;exitX=0.2996845425867508;exitY=0.0;exitPerimeter=0;entryX=0.5026178010471204;entryY=1.0;entryPerimeter=0;" edge="1" parent="1" source="extensions" target="evidence">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="948" y="678" as="sourcePoint" />
+            <mxPoint x="720" y="566" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="948" y="611" />
+              <mxPoint x="720" y="611" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="title" value="05 · Requirement-to-evidence chain" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=none;fontColor=#253449;fontFamily=Helvetica;fontSize=30;align=left;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="44" y="32" width="1350" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="A traceable claim links a business need to executable behavior, a check, and preserved evidence" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=none;fontColor=#253449;fontFamily=Helvetica;fontSize=18;align=left;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="44" y="88" width="1350" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="need" value="Business need&#10;BR-001…BR-028 in evidence-matrix.csv&#10;Intended user outcome + acceptance rule&#10;Scope, owner and status are explicit" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#142b4b;strokeColor=#142b4b;fontColor=#ffffff;fontFamily=Helvetica;fontSize=16.104363472784527;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="44" y="161" width="382" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="design" value="Technical design&#10;Architecture + contracts + roles&#10;Metric prerequisites + missingness&#10;Decisions and production gaps" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#edf3ff;strokeColor=#365cbd;fontColor=#163566;fontFamily=Helvetica;fontSize=18;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="528" y="161" width="382" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="code" value="Implementation&#10;Named module and function&#10;Server checks + scoring rules&#10;Native UI supports the user journey" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#edf3ff;strokeColor=#365cbd;fontColor=#163566;fontFamily=Helvetica;fontSize=17.94486215538847;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="161" width="382" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="checks" value="Verification&#10;Named unit / API / browser tests&#10;Commands + dated output&#10;Readiness + access checks verified&#10;Test presence alone is not a pass record" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#cbd5e1;fontColor=#253449;fontFamily=Helvetica;fontSize=15.701754385964914;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="416" width="382" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="evidence" value="Evidence artifact&#10;Report + manifest + input snapshot&#10;Rubric + reviewer record + raw capture&#10;Version / runtime / command log&#10;Only derived reports live in SQLite" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#edf8f3;strokeColor=#6a9c84;fontColor=#21533a;fontFamily=Helvetica;fontSize=16.528162511542014;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="528" y="416" width="382" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="claim" value="Permissible conclusion&#10;Implementation behavior is testable&#10;Synthetic outcomes prove fixture behavior&#10;Real sector performance needs real data&#10;No certification or validated global score" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff7e8;strokeColor=#d7ae62;fontColor=#78521d;fontFamily=Helvetica;fontSize=14.95405179615706;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="44" y="416" width="382" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="research" value="Research basis&#10;P-4: reproducibility and multiple evaluation dimensions&#10;P-5: clinical context, grounding and privacy&#10;P-6: disaggregation and controlled pairs&#10;P-7: threat models, attacks and utility retention" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f4f6f9;strokeColor=#cbd5e1;fontColor=#455469;fontFamily=Helvetica;fontSize=17;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="44" y="678" width="640" height="158" as="geometry" />
+        </mxCell>
+        <mxCell id="extensions" value="Next evidence milestone&#10;Freeze one independently reviewed sector dataset&#10;Capture a real single-agent baseline + agent candidate&#10;Validate rubrics, trace completeness and sample design&#10;Retain adverse outcomes and matched compute budgets" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f4f6f9;strokeColor=#cbd5e1;fontColor=#455469;fontFamily=Helvetica;fontSize=17;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="758" y="678" width="634" height="158" as="geometry" />
+        </mxCell>
+        <mxCell id="note" value="Paper alignment is thematic. Multi-agent metrics and product authorization rules are implementation extensions; neither is established as validated by the supplied papers." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#cbd5e1;fontColor=#253449;fontFamily=Helvetica;fontSize=13.58366676926234;align=center;verticalAlign=middle;spacing=12;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="44" y="881" width="1348" height="38" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

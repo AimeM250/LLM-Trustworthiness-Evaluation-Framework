@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 960" role="img" aria-labelledby="title-01-architecture">
+<title id="title-01-architecture">01 · System architecture</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/></marker></defs>
+<rect width="1440" height="960" fill="white"/>
+<polyline points="264,234.0 334,234.0" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="299.0" y="224.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">uses</text>
+<polyline points="618,234.0 698,234.0" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="658.0" y="224.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">same origin</text>
+<polyline points="998,234.0 1080,234.0" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="1039.0" y="224.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">each request</text>
+<polyline points="294,467.0 368,467.0" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="331.0" y="457.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">upload locally</text>
+<polyline points="648,467.0 726,467.0" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="687.0" y="457.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">validate</text>
+<polyline points="996,467.0 1080,467.0" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="1038.0" y="457.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">valid inputs</text>
+<polyline points="848,303 848,350 861,350 861,392" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="864.0" y="316.5" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">dispatch</text>
+<polyline points="169,634 169,542" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)" stroke-dasharray="7 5"/>
+<text x="185.0" y="578.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">captured evidence</text>
+<polyline points="368,708 326,708 326,570 244,570 244,542" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<polyline points="1150,542 1150,590 861,590 861,634" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="1166.0" y="556.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">save report</text>
+<polyline points="996,707.0 1080,707.0" fill="none" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="1038.0" y="697.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#455469" stroke="white" stroke-width="5" paint-order="stroke">read</text>
+<text x="44" y="65.6" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="700" fill="#253449">01 · System architecture</text>
+<text x="44" y="111.26" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#253449">Local research workspace · external execution supplies evidence through files</text>
+<rect x="44" y="165" width="220" height="138" rx="10" fill="#142b4b" stroke="#142b4b"/>
+<text x="154.0" y="215.17820867959372" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18.097876269621423" font-weight="700" fill="#ffffff">Research team</text>
+<text x="154.0" y="239.79132040627886" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18.097876269621423" font-weight="400" fill="#ffffff">Viewer · Researcher</text>
+<text x="154.0" y="264.404432132964" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18.097876269621423" font-weight="400" fill="#ffffff">Administrator</text>
+<rect x="334" y="165" width="284" height="138" rx="10" fill="#edf3ff" stroke="#365cbd"/>
+<text x="476.0" y="217.64186327888686" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15.728977616454932" font-weight="700" fill="#163566">Browser workspace</text>
+<text x="476.0" y="239.03327283726557" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15.728977616454932" font-weight="400" fill="#163566">Sign in · choose metrics</text>
+<text x="476.0" y="260.42468239564425" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15.728977616454932" font-weight="400" fill="#163566">Provide data · review results</text>
+<rect x="698" y="165" width="300" height="138" rx="10" fill="#edf3ff" stroke="#365cbd"/>
+<text x="848.0" y="216.63520871143376" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.69691470054447" font-weight="700" fill="#163566">Local HTTP API</text>
+<text x="848.0" y="239.34301270417424" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.69691470054447" font-weight="400" fill="#163566">127.0.0.1:8765</text>
+<text x="848.0" y="262.0508166969147" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.69691470054447" font-weight="400" fill="#163566">Host / Origin / request token</text>
+<rect x="1080" y="165" width="302" height="138" rx="10" fill="#edf3ff" stroke="#365cbd"/>
+<text x="1231.0" y="215.88471177944862" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17.41854636591479" font-weight="700" fill="#163566">Access control</text>
+<text x="1231.0" y="239.57393483709274" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17.41854636591479" font-weight="400" fill="#163566">Session + current role</text>
+<text x="1231.0" y="263.2631578947369" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17.41854636591479" font-weight="400" fill="#163566">Ownership + metric filtering</text>
+<rect x="44" y="392" width="250" height="150" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+<text x="169.0" y="436.03999999999996" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#253449">Research input files</text>
+<text x="169.0" y="460.52" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#253449">cases.jsonl</text>
+<text x="169.0" y="484.99999999999994" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#253449">observations.json</text>
+<text x="169.0" y="509.47999999999996" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#253449">profile.json</text>
+<rect x="368" y="392" width="280" height="150" rx="10" fill="#edf3ff" stroke="#365cbd"/>
+<text x="508.0" y="426.2" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#163566">Data readiness</text>
+<text x="508.0" y="449.32" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#163566">Requirements + starter ZIP</text>
+<text x="508.0" y="472.44" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#163566">Non-persistent preflight</text>
+<text x="508.0" y="495.56" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#163566">Verified unit / API</text>
+<text x="508.0" y="518.68" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#163566">and browser checks</text>
+<rect x="726" y="392" width="270" height="150" rx="10" fill="#edf3ff" stroke="#365cbd"/>
+<text x="861.0" y="440.4887218045113" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15.413533834586467" font-weight="700" fill="#163566">Schema validation</text>
+<text x="861.0" y="461.45112781954884" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15.413533834586467" font-weight="400" fill="#163566">Types · IDs · prompt hash</text>
+<text x="861.0" y="482.4135338345865" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15.413533834586467" font-weight="400" fill="#163566">Scope · trace ordering</text>
+<text x="861.0" y="503.37593984962405" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15.413533834586467" font-weight="400" fill="#163566">Missingness remains explicit</text>
+<rect x="1080" y="392" width="302" height="150" rx="10" fill="#edf3ff" stroke="#365cbd"/>
+<text x="1231.0" y="437.76" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#163566">Evaluation engine</text>
+<text x="1231.0" y="460.88" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#163566">18 scorers + summaries</text>
+<text x="1231.0" y="484.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#163566">Case-weighted statistics</text>
+<text x="1231.0" y="507.12" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#163566">Paired comparisons</text>
+<rect x="44" y="634" width="250" height="146" rx="10" fill="#fff7e8" stroke="#d7ae62" stroke-dasharray="7 5"/>
+<text x="169.0" y="683.4839685420447" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13.672111312764672" font-weight="700" fill="#78521d">External model / agent runner</text>
+<text x="169.0" y="702.0780399274047" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13.672111312764672" font-weight="400" fill="#78521d">Capture responses + failures</text>
+<text x="169.0" y="720.6721113127646" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13.672111312764672" font-weight="400" fill="#78521d">Capture resources + traces</text>
+<text x="169.0" y="739.2661826981246" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13.672111312764672" font-weight="400" fill="#78521d">No live provider connector</text>
+<rect x="368" y="634" width="280" height="146" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+<text x="508.0" y="678.3892137751786" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.634178037686812" font-weight="700" fill="#253449">Independent review</text>
+<text x="508.0" y="701.0116959064327" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.634178037686812" font-weight="400" fill="#253449">References + claim evidence</text>
+<text x="508.0" y="723.6341780376868" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.634178037686812" font-weight="400" fill="#253449">Outcome / safety labels</text>
+<text x="508.0" y="746.2566601689408" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.634178037686812" font-weight="400" fill="#253449">Rubric + evaluator identity</text>
+<rect x="726" y="634" width="270" height="146" rx="10" fill="#edf3ff" stroke="#365cbd"/>
+<text x="861.0" y="681.4029038112523" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14.88203266787659" font-weight="700" fill="#163566">Local SQLite</text>
+<text x="861.0" y="701.6424682395644" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14.88203266787659" font-weight="400" fill="#163566">Accounts · sessions</text>
+<text x="861.0" y="721.8820326678766" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14.88203266787659" font-weight="400" fill="#163566">Reports + owner / sample flag</text>
+<text x="861.0" y="742.1215970961888" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14.88203266787659" font-weight="400" fill="#163566">No raw response archive</text>
+<rect x="1080" y="634" width="302" height="146" rx="10" fill="#edf8f3" stroke="#6a9c84"/>
+<text x="1231.0" y="678.0732002419842" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.81790683605566" font-weight="700" fill="#21533a">Reviewable outputs</text>
+<text x="1231.0" y="700.9455535390199" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.81790683605566" font-weight="400" fill="#21533a">Role-filtered result pages</text>
+<text x="1231.0" y="723.8179068360556" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.81790683605566" font-weight="400" fill="#21533a">JSON / Markdown exports</text>
+<text x="1231.0" y="746.6902601330913" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16.81790683605566" font-weight="400" fill="#21533a">Manifest + coverage + caveats</text>
+<rect x="44" y="842" width="1338" height="60" rx="10" fill="#f4f6f9" stroke="#cbd5e1"/>
+<text x="713.0" y="877.44" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#455469">DEPLOYMENT BOUNDARY   One device · loopback HTTP · local files and database · no public hosting, cloud sync or provider API calls</text>
+</svg>
