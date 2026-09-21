@@ -97,7 +97,7 @@ flowchart LR
 - `ltef/collection.py`: a Python adapter boundary for collecting model responses.
 - `ltef/reporting.py`: JSON and Markdown reports; raw responses and secrets are omitted.
 - `ltef/webapp.py` / `ltef/auth.py` / `ltef/storage.py`: the local, account-backed web workspace.
-- `api/`: the separate, stateless serverless handler behind the public Vercel demo (see below).
+- `handler.py` / `_demo.py`: the separate, stateless serverless handler behind the public Vercel demo (see below).
 - `examples/profiles/`: uncalibrated sector research profiles.
 - `docs/`: measurement protocol, research traceability, revised 36-month roadmap.
 
@@ -229,7 +229,7 @@ Additional browser verification: `python3 scripts/check_data_workflow.py`. The d
 
 Two genuinely different things share the same frontend (`ltef/web/`):
 
-|  | Local workspace (`ltef/webapp.py`) | Public demo (`api/`, deployed on Vercel) |
+|  | Local workspace (`ltef/webapp.py`) | Public demo (`handler.py`, deployed on Vercel) |
 |---|---|---|
 | Accounts | Real accounts, salted PBKDF2 passwords, roles | None — "sign in" is cosmetic, always the same demo researcher identity |
 | Storage | Persistent SQLite (`runs/web/workspace.sqlite3`) | None — evaluation results are encoded into their own id and reconstructed on read |
@@ -237,7 +237,7 @@ Two genuinely different things share the same frontend (`ltef/web/`):
 | Your data | Stays on your machine | Never written to any server; an uploaded evaluation's result round-trips through your own browser via its self-describing id |
 | Intended use | Real evaluation work you want to keep | Trying the framework and its UI risk-free |
 
-The public demo runs the exact same scoring engine (`ltef.engine.evaluate`) on whatever cases/observations/profile you give it — the *scoring is real* — it just never persists anything server-side. See `api/_demo.py` for the implementation and [SECURITY.md](SECURITY.md) for why this split exists.
+The public demo runs the exact same scoring engine (`ltef.engine.evaluate`) on whatever cases/observations/profile you give it — the *scoring is real* — it just never persists anything server-side. See `_demo.py` for the implementation and [SECURITY.md](SECURITY.md) for why this split exists.
 
 ## Contributing
 

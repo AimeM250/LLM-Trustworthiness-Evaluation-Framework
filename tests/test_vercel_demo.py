@@ -1,4 +1,4 @@
-"""Unit tests for api/_demo.py, the stateless logic behind the public Vercel demo.
+"""Unit tests for _demo.py, the stateless logic behind the public Vercel demo.
 
 These test pure functions only (no HTTP, no filesystem writes) — the public demo has no
 database, so every 'run' must be fully reconstructable from its id alone.
@@ -8,11 +8,11 @@ import sys
 import unittest
 
 ROOT = Path(__file__).resolve().parent.parent
-if str(ROOT / 'api') not in sys.path:
+if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from api._demo import (DEMO_USER, SAMPLE_SECTORS, bootstrap_payload, decode_adhoc,
-                        encode_adhoc, new_evaluation, resolve_run, sample_id, sample_listing)
+from _demo import (DEMO_USER, SAMPLE_SECTORS, bootstrap_payload, decode_adhoc,
+                    encode_adhoc, new_evaluation, resolve_run, sample_id, sample_listing)
 from ltef.auth import VIEWER_METRICS
 
 

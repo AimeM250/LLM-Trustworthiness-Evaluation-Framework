@@ -1,9 +1,31 @@
 {
-  "buildCommand": "mkdir -p public/design public/samples/profile && cp -r ltef/web/. public/ && cp docs/design/technical-design.html docs/design/technical-design.pdf docs/design/evidence-matrix.csv docs/design/LTEF-technical-design.drawio docs/design/design-package.zip public/design/ && cp examples/cases.jsonl examples/observations.json public/samples/ && cp examples/profiles/finance.json public/samples/profile/finance",
-  "outputDirectory": "public",
-  "functions": {
-    "api/[...slug].py": {
-      "includeFiles": "ltef/**,examples/**"
-    }
-  }
+  "builds": [
+    { "src": "ltef/web/**", "use": "@vercel/static" },
+    { "src": "docs/design/technical-design.html", "use": "@vercel/static" },
+    { "src": "docs/design/technical-design.pdf", "use": "@vercel/static" },
+    { "src": "docs/design/evidence-matrix.csv", "use": "@vercel/static" },
+    { "src": "docs/design/LTEF-technical-design.drawio", "use": "@vercel/static" },
+    { "src": "docs/design/design-package.zip", "use": "@vercel/static" },
+    { "src": "examples/cases.jsonl", "use": "@vercel/static" },
+    { "src": "examples/observations.json", "use": "@vercel/static" },
+    { "src": "examples/profiles/finance.json", "use": "@vercel/static" },
+    { "src": "handler.py", "use": "@vercel/python" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/handler.py" },
+    { "src": "/$", "dest": "/ltef/web/index.html" },
+    { "src": "/app.js", "dest": "/ltef/web/app.js" },
+    { "src": "/data.js", "dest": "/ltef/web/data.js" },
+    { "src": "/style.css", "dest": "/ltef/web/style.css" },
+    { "src": "/favicon.svg", "dest": "/ltef/web/favicon.svg" },
+    { "src": "/fonts/(.*)", "dest": "/ltef/web/fonts/$1" },
+    { "src": "/design/technical-design.html", "dest": "/docs/design/technical-design.html" },
+    { "src": "/design/technical-design.pdf", "dest": "/docs/design/technical-design.pdf" },
+    { "src": "/design/evidence-matrix.csv", "dest": "/docs/design/evidence-matrix.csv" },
+    { "src": "/design/LTEF-technical-design.drawio", "dest": "/docs/design/LTEF-technical-design.drawio" },
+    { "src": "/design/design-package.zip", "dest": "/docs/design/design-package.zip" },
+    { "src": "/samples/cases.jsonl", "dest": "/examples/cases.jsonl" },
+    { "src": "/samples/observations.json", "dest": "/examples/observations.json" },
+    { "src": "/samples/profile/finance", "dest": "/examples/profiles/finance.json" }
+  ]
 }

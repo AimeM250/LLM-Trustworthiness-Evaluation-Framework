@@ -1,19 +1,31 @@
 """Vercel serverless entrypoint for the public LTEF demo (everything under /api/*).
 
+Routed here via vercel.json's legacy `routes` array (not `rewrites` — Vercel's newer
+`rewrites` mechanism overwrites the path a Python handler sees with the rewrite's
+destination rather than preserving the original request, which is useless for a handler
+that dispatches on path; the older `routes` + `builds` mechanism preserves it correctly).
+
 This is deliberately separate from ltef/webapp.py, the real local server: there is no
 SQLite workspace here, no password storage, and "signing in" only toggles a cosmetic
-cookie (see api/_demo.py and SECURITY.md). The frontend it serves (ltef/web/*, published
-as static files by vercel.json) is completely unmodified — every fetch() call it makes
-already goes to a relative /api/... path handled here with the same JSON shapes the local
-server returns, so a visitor can browse the exact same UI.
+cookie (see _demo.py and SECURITY.md). The frontend it serves (ltef/web/*, published as
+static files by vercel.json's `builds`) is completely unmodified — every fetch() call it
+makes already goes to a relative /api/... path handled here with the same JSON shapes the
+local server returns, so a visitor can browse the exact same UI.
 """
 import json
+import sys
 from http.client import responses as http_reasons
 from http.cookies import SimpleCookie
 from http.server import BaseHTTPRequestHandler
+from pathlib import Path
 from urllib.parse import parse_qs, urlsplit
 
-# Import _demo first: it inserts the repo root onto sys.path so `ltef` is importable below.
+# Vercel's Python runtime does not add this file's own directory to sys.path, so a plain
+# `import _demo` fails at runtime even though it works when this file is run locally.
+_HERE = Path(__file__).resolve().parent
+if str(_HERE) not in sys.path:
+    sys.path.insert(0, str(_HERE))
+
 from _demo import (DEMO_TOKEN, DEMO_USER, bootstrap_payload, new_evaluation, readiness,
                     resolve_run, run_comparison, run_export)
 

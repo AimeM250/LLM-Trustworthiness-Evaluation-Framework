@@ -1,0 +1,12 @@
+# ltef/webapp.py (the real local server) and ltef/storage.py (unused) aren't needed by the
+# public demo (see handler.py / _demo.py) — keep them out of the deployment upload.
+ltef/webapp.py
+ltef/storage.py
+
+.git
+.github
+node_modules
+runs/
+tests/
+scripts/check_webapp.py
+scripts/check_data_workflow.py
