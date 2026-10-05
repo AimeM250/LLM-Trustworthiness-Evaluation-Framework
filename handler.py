@@ -18,7 +18,7 @@ from http.client import responses as http_reasons
 from http.cookies import SimpleCookie
 from http.server import BaseHTTPRequestHandler
 from pathlib import Path
-from urllib.parse import parse_qs, urlsplit
+from urllib.parse import parse_qs, unquote, urlsplit
 
 # Vercel's Python runtime does not add this file's own directory to sys.path, so a plain
 # `import _demo` fails at runtime even though it works when this file is run locally.
@@ -106,7 +106,9 @@ class handler(BaseHTTPRequestHandler):
             if path.startswith('/api/runs/'):
                 self.require_signed_in(user)
                 pieces = path.split('/')
-                run_id = pieces[3]
+                # The frontend URL-encodes sample:/adhoc: IDs. Decode the ID
+                # once, after splitting, so encoded slashes cannot alter routing.
+                run_id = unquote(pieces[3])
                 if len(pieces) == 5 and pieces[4] == 'comparison':
                     return self.respond(200, run_comparison(
                         run_id, query.get('baseline', [''])[0], query.get('candidate', [''])[0], user))
