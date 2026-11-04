@@ -63,7 +63,7 @@ assigns private legacy reports to the first administrator. Viewer responses filt
 metric definitions, profile metrics, system measurements, and observation metrics;
 restricted supplementary measurements are also removed. Original uploaded response
 text and raw traces are not retained in reports. Static files are explicitly
-allowlisted; petition documents are not served.
+allowlisted; private documents are not served.
 
 Python verification: **50 tests pass**, including the original 38 engine/workspace
 tests and 12 account/API/migration tests. Added checks cover concurrent initial
@@ -84,4 +84,4 @@ Implemented a three-step Data requirements workflow: select sector/metrics, insp
 
 Final Python verification: **59 tests passed** (16.587 seconds). Both `scripts/check_webapp.py` and `scripts/check_data_workflow.py` passed, with desktop/mobile layouts and no JavaScript errors. New checks include missing clinical labels, prompt mismatch, readiness invalidation, no preflight persistence, selected-metric ZIP validity, Viewer denial and authenticated document allowlisting.
 
-`docs/design` contains the BRD and technical design, 28-row evidence matrix, five-page native draw.io source, SVG previews, PDF/HTML and verification record. The draw.io MCP was configured in Codex and initialization/tool discovery verified. Diagrams were authored locally; private petition content was not sent to MCP. Production and scientific-validation gaps remain explicit.
+`docs/design` contains the BRD and technical design, 28-row evidence matrix, five-page native draw.io source, SVG previews, PDF/HTML and verification record. Diagrams were authored locally as native draw.io files. Production and scientific-validation gaps remain explicit.

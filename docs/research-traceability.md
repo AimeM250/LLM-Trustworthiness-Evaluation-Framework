@@ -21,8 +21,8 @@ Repeated-trial reliability is motivated by agent benchmark practice, including [
 
 ## Position relative to existing frameworks
 
-LTEF should reuse and compare against appropriate existing work rather than claim the absence of evaluation tooling. The supplied P-4 text itself discusses HELM, TrustLLM, DecodingTrust, and MLCommons AIS/AILuminate. The earlier correction about omitting AILuminate applied to the petition's comparison section; it does not mean P-4 omitted it. Any novelty claim requires an up-to-date capability comparison and experimental evidence.
+LTEF should reuse and compare against appropriate existing work rather than claim the absence of evaluation tooling. The P-4 systematic review discusses HELM, TrustLLM, DecodingTrust, and MLCommons AIS/AILuminate. Any novelty claim requires an up-to-date capability comparison and experimental evidence.
 
-## Truthful evidence statement for today's implementation
+## Current evidence statement
 
-As of September 16, 2026, a local LTEF v0.1 prototype exists with executable scoring, schema validation, synthetic fixtures, reports, and automated tests. It has not been publicly released, tested against real models in this session, deployed at a partner, validated for clinical use, or accepted by a standards organization. The demo observations and improvements are deliberately constructed fixtures, not measured provider performance. Retain these boundaries in research and petition descriptions.
+LTEF v0.1.0 was released publicly on September 21, 2026, with executable scoring, schema validation, synthetic fixtures, reports, and automated tests. It has not yet been tested against real models, deployed at a partner, validated for clinical use, or accepted by a standards organization. The demo observations and improvements are deliberately constructed fixtures, not measured provider performance. Keep these boundaries in any description of LTEF.

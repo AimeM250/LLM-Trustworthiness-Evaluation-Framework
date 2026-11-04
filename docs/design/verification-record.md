@@ -12,10 +12,8 @@ This record concerns local implementation behavior, not validated model or secto
 | Editable diagram structure | Parse native draw.io XML; verify per-page cell uniqueness and source/target references | Five pages; connected edges reference existing shapes. |
 | Design content rendering | Chromium opens generated local HTML | Five inline SVG figures and 28 requirement cards; PDF generated. |
 | Visual inspection | Desktop/mobile intake screenshots; HTML design preview; five SVG diagram previews | Reviewed typography, text fit, flow and boundaries. Short connector labels and ownership route adjusted where needed. |
-| draw.io MCP configuration | `codex mcp add drawio --url https://mcp.draw.io/mcp`; `codex mcp get drawio` | Added globally; enabled Streamable HTTP endpoint. |
-| draw.io MCP protocol | Initialization and tools/list via public endpoint | Server drawio-mcp-app 1.0.0; protocol 2024-11-05; tools create_diagram and search_shapes. See mcp-verification.json. |
 
-The diagrams were created locally as editable draw.io XML; no successful diagram-creation MCP invocation is claimed. The server is configured for future sessions; restart the Codex extension to load it. No private petition content was sent during connection checks.
+The diagrams were created locally as editable draw.io XML.
 
 Current design limitations: loopback-only deployment, no live provider adapter, no independent reviewer/sector validation, no formal accessibility audit, no production load/recovery evidence. Passing fixture tests supports the specified code behavior only.
 
@@ -27,3 +25,9 @@ Screenshot evidence in the project: `runs/web/data-{choose,requirements,mobile,c
 The outer project folder is now `LLM-Trustworthiness-Evaluation-Framework`, expanded from LLM Trustworthiness Evaluation Framework. Documentation paths, PDFs and the design ZIP were refreshed. The Python import name remains `ltef`.
 
 Targeted verification after moving: the workspace database matched its pre-move SHA-256 byte for byte (one existing user and three reports), all 18 metric definitions imported, a selected-metric starter ZIP generated, the macOS launcher passed shell syntax checking, and the restarted local app served its assets and recognized the existing account. No scoring or authorization behavior changed; the 59-test and browser-suite records above belong to the preceding implementation verification.
+
+## Documentation cleanup — November 3, 2026
+
+Removed notes about local editor tooling (draw.io connector setup) and a local folder path, which did not concern LTEF behavior. Added an author credit and source link to the public site footer. No scoring, metric, schema or authorization code changed.
+
+Re-run after the change: `python3 -m unittest discover -s tests -q` ran 80 tests, OK. `python3 scripts/check_webapp.py` and `python3 scripts/check_data_workflow.py` both passed with no JavaScript errors.

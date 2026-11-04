@@ -135,7 +135,7 @@ Provider-specific live adapters; validated sector datasets and annotation protoc
 
 The supplied profiles currently share core metrics and vary sector selection; they are **configuration starting points**, not three independently validated sector products. Defense/CMMC-specific profiling is deferred until the scope and evidence justify it.
 
-Read the [measurement protocol](docs/measurement-protocol.md), [research traceability](docs/research-traceability.md), and [revised 36-month roadmap](docs/roadmap-36-months.md) before making research or petition claims.
+Read the [measurement protocol](docs/measurement-protocol.md), [research traceability](docs/research-traceability.md), and [revised 36-month roadmap](docs/roadmap-36-months.md) before relying on LTEF results.
 
 ## Web workspace
 

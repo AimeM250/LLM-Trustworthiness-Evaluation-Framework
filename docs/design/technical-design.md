@@ -220,7 +220,7 @@ Multi-agent metrics extend the supplied papers' scope. Product access roles are 
 | Keep local SQLite report storage. | Fits an offline/local research prototype without external infrastructure. | Multiuser public hosting requires a new deployment, identity, storage and operations design. |
 | Report separate metrics, coverage and uncertainty. | An unvalidated composite obscures tradeoffs and missing evidence. | Any future decision threshold or score needs a separate validation and governance process. |
 | Retain source evidence outside the report database. | Minimizes persisted raw content in the application. | The research team must establish secure source retention; the report alone cannot reconstruct every judgment. |
-| Provide native draw.io files and local previews. | Architecture remains editable and reviewable without transmitting private research files. | Open the `.drawio` file in diagrams.net or compatible desktop draw.io; MCP installation is a separate integration. |
+| Provide native draw.io files and local previews. | Architecture remains editable and reviewable without transmitting private research files. | Open the `.drawio` file in diagrams.net or compatible desktop draw.io. |
 
 ### Priority backlog
 
@@ -230,12 +230,6 @@ Multi-agent metrics extend the supplied papers' scope. Product access roles are 
 4. **Metric validity and sector generalization:** calibrate rubrics, assess reviewer agreement, plan sample sizes and subgroup coverage, inspect disagreements, then repeat across sectors and model families. Integrate these gates into the 36-month research roadmap.
 5. **Production readiness, if requested:** external identity and recovery, HTTPS/reverse proxy, restricted registration, tenant/storage model, secrets handling, background jobs, observability, audit events, backup/restore, retention/deletion, migration tests, load testing and threat review. These are planned work, not current guarantees.
 
-### MCP integration decision
-
-The official draw.io MCP was added to the local Codex configuration as `drawio`, using Streamable HTTP at `https://mcp.draw.io/mcp`. `codex mcp get drawio` confirmed it enabled. A public initialization request returned HTTP 200 with server identity `drawio-mcp-app` version `1.0.0`. The tool-list check also succeeded and exposed `create_diagram` and `search_shapes`. No diagram-creation tool invocation was needed for these locally authored native files. Restart the Codex extension to load the newly configured server, as described in the [official Codex MCP documentation](https://developers.openai.com/codex/mcp/).
-
-The endpoint comes from the [official draw.io MCP documentation](https://www.drawio.com/docs/manual/generate/drawio-mcp-server/). These diagrams were authored locally as native draw.io XML, not generated through a successful MCP tool invocation. No private petition documents were sent to the connector. Native draw.io source and local previews are usable immediately without the connector.
-
 ## 11. Review and handoff
 
 Open `technical-design.html` for the complete design and evidence matrix. Open `LTEF-technical-design.drawio` in diagrams.net using **File → Open From → Device** or a compatible desktop installation; each of the five pages contains editable shapes, text and connectors. SVG files provide quick previews. CSV can be opened in Excel or another spreadsheet application.
@@ -243,7 +237,7 @@ Open `technical-design.html` for the complete design and evidence matrix. Open `
 To regenerate local previews and the HTML document after updating the Markdown or matrix:
 
 ```sh
-cd /Users/aimemunezero/Documents/Petition/LLM-Trustworthiness-Evaluation-Framework
+cd LLM-Trustworthiness-Evaluation-Framework
 python3 scripts/build_design_diagrams.py
 ```
 

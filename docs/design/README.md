@@ -8,7 +8,6 @@ Start with **technical-design.html** for a navigable document, or **technical-de
 - **01…05 SVG files**: standalone diagram previews.
 - **technical-design.md**: editable document source.
 - **verification-record.md**: actual test commands, results and scope.
-- **mcp-verification.json**: official draw.io MCP initialization/tool-discovery record. Restart Codex to load the newly configured connector.
 - **evidence/**: synthetic test-session screenshots and reproducible build/check scripts.
 - **SHA256SUMS.txt**: package file fingerprints. These identify contents; they are not a digital signature.
 

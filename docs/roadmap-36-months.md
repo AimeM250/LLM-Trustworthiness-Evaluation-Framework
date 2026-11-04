@@ -1,16 +1,16 @@
 # Revised 36-month LTEF implementation and validation roadmap
 
-Drafted September 16, 2026. Month 1 begins when you commit the project scope and actual time/resources; this document does not backdate development. Multi-agent evaluation is an explicit extension to the original LLM-focused endeavor.
+Drafted September 16, 2026; updated November 2026. Multi-agent evaluation extends LTEF from single models to LLM-based multi-agent workflows.
 
 ## What exists at the starting point
 
-Local v0.1 scoring engine; 18 metric definitions/scorers; three uncalibrated sector profiles; synthetic fixtures; per-case and aggregate reports; paired comparisons; corrected NIST relevance mappings; validation tests. No public release, external pilot, live-model result, or calibrated sector acceptance threshold is claimed.
+Local v0.1 scoring engine; 18 metric definitions/scorers; three uncalibrated sector profiles; synthetic fixtures; per-case and aggregate reports; paired comparisons; corrected NIST relevance mappings; validation tests. Released publicly on September 21, 2026 (v0.1.0). No external pilot, live-model result, or calibrated sector acceptance threshold is claimed yet.
 
 ## Proposed sequence and measurable gates
 
 | Period | Work | Reviewable deliverables | Gate before expansion |
 |---|---|---|---|
-| Months 1–3 | Freeze definitions, choose initial sector/use case, implement selected provider adapters, validate deterministic scorers and trace contract | Specification v1; data/rubric cards; reproducible live baseline; complete request/error accounting | Demonstrate that reported scores agree with independently checked example outcomes; resolve the papers' mapping/methodology issues |
+| Months 1–3 | Freeze definitions, choose initial sector/use case, implement selected provider adapters, validate deterministic scorers and trace contract | Specification v1; data/rubric cards; reproducible live baseline; complete request/error accounting | Demonstrate that reported scores agree with independently checked example outcomes; re-check the systematic reviews' NIST mappings and methods against the implemented metrics |
 | Months 4–6 | Build representative initial-sector development and held-out sets; establish annotation procedure; compare at least two model configurations if resources permit | Versioned dataset with rights/provenance; reviewer disagreement analysis; model comparison report with coverage and uncertainty | Document reference/annotation validity, feasible sample sizes, reproducible runs, and known measurement limitations |
 | Months 7–9 | Add executable isolated single-agent and two-agent scenarios; integrate full event capture; test handoffs, permissions, failures, and retries | Trace adapter; controlled fault-injection fixtures; permission/task checks; resource accounting | Demonstrate capture completeness on instrumented scenarios and distinguish agent success from policy compliance |
 | Months 10–12 | Controlled single-agent versus multi-agent evaluation; first research release and technical manuscript submission | Reproducible experiment package; equal-task and budget-aware comparisons; documented limitations; release candidate | Independent reproduction by a collaborator where available; no unsupported claims of superiority or adoption |
@@ -34,17 +34,17 @@ These are planned milestones, not guaranteed publication or partner outcomes. Ad
 ## Required resource decisions
 
 - Confirm the first sector and one initial use case. The code supports all three profiles, but deep validation should start with one.
-- Record your actual weekly availability, budget, API/model access, compute, and storage.
+- Record available weekly time, budget, API/model access, compute, and storage.
 - Identify who can independently review sector labels; healthcare research needs appropriately qualified expertise for clinical claims.
 - Decide what existing artifacts can be published and what is employer-owned or confidential.
 - Define dataset permissions, annotation access, release scope, and reproducibility responsibilities.
 - Set study-specific sample sizes and acceptance criteria before looking at held-out results.
 
-The code is intentionally provider-neutral until these choices are made. No live API costs or external messages were incurred in creating it.
+The code is intentionally provider-neutral until these choices are made.
 
-## Changes to the original plan
+## Planning principles
 
-Move reproducible implementation and evidence of progress to the front. Introduce multi-agent traces and controlled experiments during year one instead of appending vague agent metrics in year three. Validate one sector before scaling to three. Replace promised journal acceptance or standards integration with controllable submissions and actual documented outcomes. Separate reporting thresholds from scientifically validated acceptance criteria. Reserve human-overreliance claims for a real human study.
+Put reproducible implementation first. Introduce multi-agent traces and controlled experiments during year one instead of appending vague agent metrics in year three. Validate one sector before scaling to three. Plan journal and standards submissions, and report their actual outcomes. Separate reporting thresholds from scientifically validated acceptance criteria. Reserve human-overreliance claims for a real human study.
 
 ## Evidence to retain at each milestone
 
